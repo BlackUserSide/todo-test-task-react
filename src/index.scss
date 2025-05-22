@@ -1,0 +1,202 @@
+body{
+  margin: 0;
+}
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+h1,h2,h3,h4,h5,h6, p{
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.container-item-todo {
+  display: flex;
+  padding: 15px 25px;
+  border-radius: 10px;
+
+  transition: all .3s ease;
+  align-items: center;
+  justify-content: space-between;
+
+
+  &.open-task {
+    border: 1px solid mediumpurple;
+  }
+
+  &.closed-task {
+    border: 1px solid greenyellow;
+  }
+
+  .checkbox-container {
+    width: 25px;
+    height: 25px;
+    border: 1px solid mediumpurple;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    svg {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      top: 2px;
+      path {
+        fill: mediumpurple;
+      }
+    }
+  }
+  .delete-container {
+    cursor: pointer;
+    svg {
+      width: 25px;
+      height: 25px;
+      path {
+        stroke: mediumpurple;
+      }
+    }
+  }
+}
+.container-todo-content {
+  max-width: 1250px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 35px 80px;
+
+  .container-items-todo {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .control-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .filters-container {
+      display: flex;
+      gap: 15px;
+
+      button {
+        &.is-select {
+          background: mediumpurple;
+          color: #fff;
+        }
+      }
+    }
+
+    .control-btn-group {
+      display: flex;
+      gap: 15px;
+
+      .add-btn {
+        svg {
+          width: 15px;
+          height: 15px;
+
+          path {
+            fill: #fff;
+          }
+        }
+
+        max-width: 100%;
+        width: 100%;
+        height: 32px;
+        background: mediumpurple;
+        color: #fff;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .3s ease background;
+        gap: 5px;
+
+        &:hover {
+          background: rgba(mediumpurple, .8);
+        }
+      }
+    }
+  }
+}
+
+.pop-up-form {
+  .bg-lock {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(#000, .5);
+    z-index: 3;
+  }
+
+  .pop-up-container-wrapper {
+    width: 450px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    z-index: 4;
+    padding: 15px 40px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    .container-form-add {
+      max-width: 100%;
+      width: 100%;
+
+      .input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .container-error-message {
+          span {
+            color: red;
+          }
+        }
+
+        input {
+          max-width: 100%;
+          width: 100%;
+          outline: none;
+          height: 32px;
+          font-size: 16px;
+          display: inline-block;
+          border: 1px solid mediumpurple;
+          border-radius: 10px;
+          padding: 5px 10px;
+        }
+      }
+    }
+
+    .add-btn-form {
+      max-width: 100%;
+      width: 100%;
+      height: 32px;
+      background: mediumpurple;
+      color: #fff;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .3s ease background;
+
+      &:hover {
+        background: rgba(mediumpurple, .8);
+      }
+    }
+  }
+}
