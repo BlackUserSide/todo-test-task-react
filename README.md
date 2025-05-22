@@ -1,4 +1,4 @@
-# shop-task-backend
+# Todo tech task React
 
 ---
 
